@@ -1,0 +1,26 @@
+{
+    "animals": [
+        { "id": 1, "name": "Doodles", "breed": "Poodle", "mission": "to be the best dog"},
+        { "id": 2, "name": "Decker", "breed": "German Sheperd" },
+        { "id": 3, "name": "Esmeee", "breed": "Pitbull" }
+    ],
+    "owners": [
+        { "id": 1, "name": "Mr. T", "number": "111-1111" },
+        { "id": 2, "name": "Obama",  "number": "111-1111"  },
+        { "id": 3, "name": "Clarence",  "number": "111-1111"},
+        { "id": 4, "name": "Voldemort",  "number": "111-1111"},
+        { "id": 5, "name": "RoboCop",  "number": "111-1111"},
+        { "id": 6, "name": "WolfCop",  "number": "111-1111"},
+        { "id": 7, "name": "The janitor from 301 Plus Park",  "number": "111-1111"}
+    ],
+    "employees": [
+        { "id": 1, "name": "Josh", "breed": "Pitbull"},
+        { "id": 2, "name": "Ava", "breed": "Pitbull"},
+        { "id": 3, "name": "Christophfer", "breed": "Pitbull" }
+    ],
+    "locations": [
+        { "id": 1, "address": "301 Plus Park"},
+        { "id": 2, "address": "500 Interstate Blvd"},
+        { "id": 3, "address": "McDonalds"}
+    ]
+}
