@@ -2,6 +2,8 @@ import { Route } from 'react-router-dom'
 import React from 'react'
 import Home from './home/Home'
 import CardList from './content/CardList'
+import CardDetail from './content/CardDetail'
+import CardForm from './content/CardForm'
 //only include these once they are built - previous practice exercise
 // import LocationCard from './location/LocationCard'
 // import EmployeeCard from './employee/EmployeeCard'
@@ -10,26 +12,59 @@ import CardList from './content/CardList'
 
 const ApplicationViews = () => {
 
-    return (
-      <React.Fragment>
-        <Route exact path="/" render={() => {
-          return <Home />
-        }} />
-        <Route path="/animals" render={() => {
-          return <CardList database="animals"/>
-        }} />
-        <Route path="/locations" render={() => {
-          return <CardList database="locations"/>
-        }} />
-        <Route path="/employees" render={() => {
-          return <CardList database="employees"/>
-        }} />
-        <Route path="/owners" render={() => {
-          return <CardList database="owners"/>
-        }} />
-      </React.Fragment>
-    )
-  }
+  return (
+    <React.Fragment>
+      <Route exact path="/" render={() => {
+        return <Home />
+      }} />
+      {/* --------------------------------------------------- */}
+      <Route exact path="/animals" render={(props) => {
+        return <CardList database="animals" {...props} />
+      }} />
+      <Route path="/animals/:cardId(\d+)" render={(props) => {
+        // Pass the animalId to the AnimalDetailComponent
+        return <CardDetail database="animals" cardId={parseInt(props.match.params.cardId)} {...props} />
+      }} />
+      <Route path="/animals/new" render={(props) => {
+        return <CardForm database="animals" {...props} />
+      }} />
+      {/* --------------------------------------------------- */}
+      <Route exact path="/locations" render={(props) => {
+        return <CardList database="locations" {...props}/>
+      }} />
+      <Route path="/locations/:cardId(\d+)" render={(props) => {
+        // Pass the animalId to the AnimalDetailComponent
+        return <CardDetail database="locations" cardId={parseInt(props.match.params.cardId)} {...props} />
+      }} />
+      <Route path="/locations/new" render={(props) => {
+        return <CardForm database="locations" {...props} />
+      }} />
+      {/* --------------------------------------------------- */}
+      <Route exact path="/employees" render={(props) => {
+        return <CardList database="employees" {...props}/>
+      }} />
+      <Route path="/employees/:cardId(\d+)" render={(props) => {
+        // Pass the animalId to the AnimalDetailComponent
+        return <CardDetail database="employees" cardId={parseInt(props.match.params.cardId)} {...props} />
+      }} />
+      <Route path="/employees/new" render={(props) => {
+        return <CardForm database="employees" {...props} />
+      }} />
+      {/* --------------------------------------------------- */}
+      <Route exact path="/owners" render={(props) => {
+        return <CardList database="owners" {...props}/>
+      }} />
+      <Route path="/owners/:cardId(\d+)" render={(props) => {
+        // Pass the animalId to the AnimalDetailComponent
+        return <CardDetail database="owners" cardId={parseInt(props.match.params.cardId)} {...props} />
+      }} />
+      <Route path="/owners/new" render={(props) => {
+        return <CardForm database="owners" {...props} />
+      }} />
+
+    </React.Fragment>
+  )
+}
 
 
 export default ApplicationViews
