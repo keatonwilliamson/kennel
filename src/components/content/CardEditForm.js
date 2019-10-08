@@ -4,11 +4,13 @@ import DataManager from "../../modules/DataManager"
 import EditFields from './EditFields';
 // import "./AnimalForm.css"
 
+//derived from  https://itnext.io/how-to-build-a-dynamic-controlled-form-with-react-hooks-2019-b39840f75c4f
+
 const CardEditForm = (props) => {
     // //set the initial state
     const [entryState, setEntryState] = useState([]);
     const [loadingStatus, setLoadingStatus] = useState(false)
-    
+
     const handleFieldChange = evt => {
         let updatedEntry = [...entryState]
         updatedEntry[evt.target.id][1] = `${evt.target.value}`
