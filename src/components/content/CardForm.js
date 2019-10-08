@@ -16,7 +16,7 @@ const CardForm = (props) => {
     }
 
     for (let i = 0; i < Object.entries(inputs).length; i++) {
-        if (Object.keys(inputs)[i] != "id") {
+        if (Object.keys(inputs)[i] !== "id") {
         entry[Object.keys(inputs)[i]] = ""
         // setEntry([Object.keys(inputs)[i]] = "")
         inputsArray.push(

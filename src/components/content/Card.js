@@ -7,7 +7,7 @@ const Card = (props) => {
   let details = []
 
   for (let i = 1; i < Object.entries(props.content).length; i++) {
-    if (Object.keys(props.content)[i] != "id") {
+    if (Object.keys(props.content)[i] !== "id") {
       details.push(<p key={i}>{`${Object.keys(props.content)[i]}: ${Object.values(props.content)[i]}`}</p>)
     }
   }
@@ -22,6 +22,7 @@ const Card = (props) => {
         {details}
         <button type="button" onClick={() => props.deleteCard(props.database, props.content.id)}>Discharge</button>
         <Link to={`/${props.database}/${props.content.id}`}><button>Details</button></Link>
+        <button type="button" onClick={() => {props.history.push(`/${props.database}/${props.content.id}/edit`)}}>Edit</button>
       </div>
     </div>
   );

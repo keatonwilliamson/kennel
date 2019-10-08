@@ -31,7 +31,7 @@ const CardList = (props) => {
                 <button type="button" className="btn" onClick={() => { props.history.push(`/${props.database}/new`) }}>Add {props.database}</button>
             </section>
             <div className="container-cards">
-                {cards[props.database].map(result => <Card key={result.id} content={result} deleteCard={deleteCard} database={props.database} />
+                {cards[props.database].map(result => <Card key={result.id} content={result} deleteCard={deleteCard} database={props.database} {...props} />
                 )}
             </div>
         </>

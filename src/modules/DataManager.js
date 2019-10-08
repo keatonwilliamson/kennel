@@ -21,5 +21,14 @@ export default {
         },
         body: JSON.stringify(newEntry)
     }).then(data => data.json())
+},
+update(array, editedEntry) {
+  return fetch(`${remoteURL}/${array}/${editedEntry.id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(editedEntry)
+  }).then(data => data.json());
 }
 }

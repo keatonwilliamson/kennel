@@ -10,7 +10,7 @@ const CardDetail = (props) => {
     let detailsArray = []
 
     for (let i = 1; i < Object.entries(details).length; i++) {
-        if (Object.keys(details)[i] != "id")
+        if (Object.keys(details)[i] !== "id")
         detailsArray.push(<p key={i}>{`${Object.keys(details)[i]}: ${Object.values(details)[i]}`}</p>)
     }
 

@@ -1,24 +1,19 @@
 {
   "animals": [
     {
-      "name": "john",
+      "name": "johnasdf",
       "breed": "doggo",
       "id": 8
     },
     {
-      "name": "yas",
-      "breed": "yeeet",
-      "id": 9
-    },
-    {
-      "name": "w",
-      "breed": "s",
-      "id": 10
-    },
-    {
       "name": "Esmeee ",
-      "breed": "Pitbull",
+      "breed": "Pitbullsdf",
       "id": 11
+    },
+    {
+      "name": "yeas",
+      "breed": "boii",
+      "id": 12
     }
   ],
   "owners": [
@@ -41,27 +36,44 @@
       "name": "RoboCop",
       "number": "1234-25345",
       "id": 11
+    },
+    {
+      "name": "taylor swift",
+      "number": "asdfasdf",
+      "id": 12
+    },
+    {
+      "name": "Bruno Mars",
+      "number": "asfasfdasfdasdf",
+      "id": 13
     }
   ],
   "employees": [
     {
       "name": "Joshua",
-      "breed": "Good employye",
+      "title": "Good employye",
       "id": 4
     },
     {
       "name": "Chkristophfer",
-      "breed": "amazing employee",
+      "title": "amazing employee",
       "id": 5
+    },
+    {
+      "name": "Employyee dude",
+      "title": "such a good employee",
+      "id": 6
     }
   ],
   "locations": [
     {
-      "address": "301 plusses park",
+      "address": "301 plue park",
+      "directions": "turn left",
       "id": 2
     },
     {
       "address": "The coolest address",
+      "directions": "turn right",
       "id": 3
     }
   ]
